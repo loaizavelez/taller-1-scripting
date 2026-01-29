@@ -1,0 +1,57 @@
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int filas = 3;
+        int columnas = 3;
+        int[,] matriz = new int[filas, columnas];
+
+        Console.WriteLine("Ingrese 9 números enteros (positivos o negativos):");
+
+        // Llenar matriz
+        for (int i = 0; i < filas; i++)
+        {
+            for (int j = 0; j < columnas; j++)
+            {
+                matriz[i, j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        // Imprimir matriz original
+        Console.WriteLine("Matriz original:");
+        for (int i = 0; i < filas; i++)
+        {
+            for (int j = 0; j < columnas; j++)
+            {
+                Console.Write(matriz[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+
+        // Reemplazar negativos
+        for (int i = 0; i < filas; i++)
+        {
+            for (int j = 0; j < columnas; j++)
+            {
+                if (matriz[i, j] < 0)
+                {
+                    matriz[i, j] = Math.Abs(matriz[i, j]);
+                }
+            }
+        }
+
+        // Imprimir matriz original
+        Console.WriteLine("Matriz sin negativos");
+        for (int i = 0; i < filas; i++)
+        {
+            for (int j = 0; j < columnas; j++)
+            {
+                Console.Write(matriz[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+
+    }
+}
