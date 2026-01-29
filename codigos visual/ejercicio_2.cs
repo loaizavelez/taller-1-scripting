@@ -24,10 +24,10 @@ namespace ejercicio_2
             }
         }
 
-        public static string ConvertirFrase(string frase)
+        public static string ConvertirFrase(string frase) // esta funcion convierte la frase a minuscula y con inicial mayuscula
         {
             
-            string[] palabras = frase.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            string[] palabras = frase.Split(' ', StringSplitOptions.RemoveEmptyEntries); // la funcion split divide la frase en palabras
 
             
             if (palabras.Length < 3)
@@ -36,7 +36,7 @@ namespace ejercicio_2
             }
 
             
-            for (int i = 0; i < palabras.Length; i++)
+            for (int i = 0; i < palabras.Length; i++) // el ciclo for se encarga de recorrer cada palabra y convertirla a minuscula y con inicial mayuscula
             {
                 string palabra = palabras[i].ToLower();
                 if (palabra.Length > 0)
@@ -46,7 +46,7 @@ namespace ejercicio_2
             }
 
             
-            return string.Join(" ", palabras);
+            return string.Join(" ", palabras); // retorna la frase unida nuevamente
         }
     }
 }
