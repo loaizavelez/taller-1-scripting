@@ -16,6 +16,8 @@ namespace firmas_de_funciones
             Console.WriteLine("La fecha y hora actual es: " + fecha);
             Console.WriteLine("Verificar si un número es impar:");
             EsImpar(5); // llama a la funcion EsImpar con el argumento 5
+            Console.WriteLine("Mostrar fecha y hora actual:");
+            FechaSinParametro(); // llama a la funcion Fecha
 
 
 
@@ -109,6 +111,14 @@ namespace firmas_de_funciones
                 Console.WriteLine("El número no es impar.");
             }
         }
+        
+
+        public static void FechaSinParametro()
+        {
+            DateTime fechaActual = DateTime.Now;
+            Console.WriteLine("Fecha y hora actual: " + fechaActual);
+        }
+
         
     
 
