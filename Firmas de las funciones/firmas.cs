@@ -119,7 +119,122 @@ namespace firmas_de_funciones
             Console.WriteLine("Fecha y hora actual: " + fechaActual);
         }
 
+
+        //------------------------------------------------------------------------
+
+    }
         
+
+namespace Firmas_Scripting_JJHP
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            SaludarNombre("Juan");
+
+            Console.WriteLine("Area del cuadrado: " + AreaCuadrado(4));
+
+            Console.WriteLine("Multiplicacion: " + Multiplicar(3, 5));
+
+            int[] numeros = { 1, 2, 3 };
+            MostrarNumeros(numeros);
+
+            Console.WriteLine("Es mayor de edad: " + EsMayorDeEdad(20));
+
+            MostrarCaracter('J');
+
+            string[] nombres = { "Ana", "Luis", "Pedro" };
+            Console.WriteLine("Primer nombre: " + PrimerNombre(nombres));
+
+            Console.WriteLine("Numero fijo: " + NumeroFijo());
+
+            Persona p = CrearPersona("Carlos", 22);
+            Console.WriteLine(p.Nombre + " = " + p.Edad);
+
+            Mensaje();
+        }
+
+        // 1. funcion sin retorno y con parametro string
+        public static void SaludarNombre(string nombre)
+        {
+            Console.WriteLine("Hola " + nombre);
+        }
+
+        // 2. funcion con retorno double
+        public static double AreaCuadrado(double lado)
+        {
+            return lado * lado;
+        }
+
+        // 3. funcion con dos parametros enteros
+        public static int Multiplicar(int a, int b)
+        {
+            return a * b;
+        }
+
+        // 4. funcion que recibe un arreglo de enteros
+        public static void MostrarNumeros(int[] numeros)
+        {
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                Console.WriteLine(numeros[i]);
+            }
+        }
+
+        // 5. funcion que retorna un booleano
+        public static bool EsMayorDeEdad(int edad)
+        {
+            return edad >= 18;
+        }
+
+        // 6. funcion que recibe un caracter
+        public static void MostrarCaracter(char letra)
+        {
+            Console.WriteLine("Caracter: " + letra);
+        }
+
+        // 7. funcion con arreglo de strings
+        public static string PrimerNombre(string[] nombres)
+        {
+            return nombres[0];
+        }
+
+        // 8. funcion sin parametros y con retorno
+        public static int NumeroFijo()
+        {
+            return 10;
+        }
+
+        // 9. funcion que retorna una clase
+        public static Persona CrearPersona(string nombre, int edad)
+        {
+            return new Persona(nombre, edad);
+        }
+
+        // 10. funcion sin parametros y sin retorno
+        public static void Mensaje()
+        {
+            Console.WriteLine("Fin del programa");
+        }
+    }
+
+    // Clase Persona
+    public class Persona
+    {
+        public string Nombre;
+        public int Edad;
+
+        public Persona(string nombre, int edad)
+        {
+            Nombre = nombre;
+            Edad = edad;
+        }
+    }
+}
+
+
+
     
 
 
@@ -127,5 +242,6 @@ namespace firmas_de_funciones
 
 
         
-    }
-}
+    
+    
+}   
