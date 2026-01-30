@@ -24,7 +24,7 @@ toda la información fue sacada de: [Academia Sanroque](https://academiasanroque
 
 ### 15.) ¿Cuál es la salida?
 
-Luego de investigar y modificar el codigo se llega a la conclusion de que el loop es infinito, esto se debe a que al entrar y salir, la valor i vuelve a ser 10, cuando empieza otra vez el ciclo i se rebaja a 9 y vuelve a 10 nunca imprime el resultado.
+Este ciclo no va a compilar, los booleanos solo reciben respuestas de si y no, por ejemplo, ¿un número es mayor a otro? si/no, la varaible **i** dentro del condicional no da una respuesta, es un parametro que no dice nada, causando que no imprima nada en la consola **porque el condicional no tiene sentido.**
 
 ```cs
 
@@ -45,4 +45,5 @@ namespace pregunta_15
     }
 }
 ```
+![No compila](image.png)
  
