@@ -29,4 +29,4 @@ ln para creas enlaces
 
 grep para acceder a todos los archivos
 
-
+![Progreso](image.png)
